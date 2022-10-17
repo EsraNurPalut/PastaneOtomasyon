@@ -85,12 +85,16 @@
             // 
             // button5
             // 
-            this.button5.Location = new System.Drawing.Point(206, 346);
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button5.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.button5.Location = new System.Drawing.Point(551, 348);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(405, 67);
+            this.button5.Size = new System.Drawing.Size(193, 66);
             this.button5.TabIndex = 4;
-            this.button5.Text = "rapor";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Text = "RAPOR ";
+            this.button5.UseVisualStyleBackColor = false;
             // 
             // label1
             // 
