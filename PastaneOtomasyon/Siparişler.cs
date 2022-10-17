@@ -16,5 +16,12 @@ namespace PastaneOtomasyon
         {
             InitializeComponent();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form1 go = new Form1();
+            go.Show();
+            this.Hide();
+        }
     }
 }
