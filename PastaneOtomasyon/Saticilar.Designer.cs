@@ -189,6 +189,7 @@
             this.button6.TabIndex = 27;
             this.button6.Text = "ara";
             this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -198,6 +199,7 @@
             this.button7.TabIndex = 28;
             this.button7.Text = "sil";
             this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 

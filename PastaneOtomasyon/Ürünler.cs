@@ -113,6 +113,9 @@ namespace PastaneOtomasyon
                 comboBox1.Items.Add(dr["SaticiNo"]);
             }
             con.Close();
+
+
+            //eksik 2. yapmüşteriler
         }
     }
 }

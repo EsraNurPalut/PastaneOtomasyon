@@ -43,7 +43,7 @@ namespace PastaneOtomasyon
         {
           
                 con.Open();
-                SqlCommand cmd = new SqlCommand("insert into Ürünler (ÜrünAd,ÜrünFiyat,KullanimTarihi,ÜretimTarihi,SatıcıNo) values (@ÜrünAd, @ÜrünFiyat, @KullanimTarihi, @ÜretimTarihi,@SatıcıNo)", con);
+                SqlCommand cmd = new SqlCommand("insert into Saticilar (SaticiAdSoyad,SaticiAdres,Saticiil,Saticiilçe) values (@SaticiAdSoyad,@SaticiAdres, @Saticiil, @Saticiilçe)", con);
 
                 cmd.Parameters.AddWithValue("@SaticiAdSoyad", textBox2.Text);
                 cmd.Parameters.AddWithValue("@SaticiAdres", textBox3.Text);
@@ -64,10 +64,31 @@ namespace PastaneOtomasyon
         private void button5_Click(object sender, EventArgs e)  //yenile 
         {
             con.Open();
-            SqlCommand komut = new SqlCommand("Update Saticilar set SaticiAdSoyad='" + textBox2.Text.ToString() + "',SaticiFiyat='" + textBox3.Text.ToString() + "',Saticiil='" + textBox4.Text.ToString() + "',Saticiilçe='" + textBox5.Text.ToString() + "'", con);
+            SqlCommand komut = new SqlCommand("Update Saticilar set SaticiAdSoyad='" + textBox2.Text.ToString() + "',SaticiAdres='" + textBox3.Text.ToString() + "',Saticiil='" + textBox4.Text.ToString() + "',Saticiilçe='" + textBox5.Text.ToString() + "'where SaticiNo='" + textBox1.Text +"'", con);
             komut.ExecuteNonQuery();
             Listele("select * from Saticilar ");
             con.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e) //ara 
+        {
+            SqlCommand cmd = new SqlCommand("select * from Saticilar  where SaticiAdSoyad like '%" + textBox2.Text + "%'", con);
+            con.Close();
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+        }
+
+        private void button7_Click(object sender, EventArgs e) //sil
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("delete  from Saticilar where SaticiNo=@SaticiNo", con);
+            cmd.Parameters.AddWithValue("@SaticiNo", textBox1.Text);
+            cmd.ExecuteNonQuery();
+            con.Close();
+            Listele("select * from Saticilar ");
+
         }
     }
 }
