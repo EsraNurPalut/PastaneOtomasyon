@@ -56,6 +56,18 @@ namespace PastaneOtomasyon
 
             }
 
+        private void button4_Click(object sender, EventArgs e)  //listele
+        {
+            Listele("select * from Saticilar ");
+        }
+
+        private void button5_Click(object sender, EventArgs e)  //yenile 
+        {
+            con.Open();
+            SqlCommand komut = new SqlCommand("Update Saticilar set SaticiAdSoyad='" + textBox2.Text.ToString() + "',SaticiFiyat='" + textBox3.Text.ToString() + "',Saticiil='" + textBox4.Text.ToString() + "',Saticiilçe='" + textBox5.Text.ToString() + "'", con);
+            komut.ExecuteNonQuery();
+            Listele("select * from Saticilar ");
+            con.Close();
         }
     }
 }
