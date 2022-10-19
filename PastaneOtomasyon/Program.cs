@@ -16,7 +16,7 @@ namespace PastaneOtomasyon
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Ürünler());
+            Application.Run(new Rapor());
         }
     }
 }

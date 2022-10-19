@@ -66,5 +66,38 @@ namespace PastaneOtomasyon
             dataGridView1.DataSource = doldur;
             con.Close();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select ÜrünAd,ÜrünFiyat,SaticiAdSoyad,Saticiil from Ürünler ü inner join Saticilar s on ü.SaticiNo=s.SaticiNo ", con); ;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select top 2 SiparisAd,SiparisAdet,count(1) AS Toplam FROM Siparisler Group by SiparisAd, SiparisAdet ORDER BY Toplam desc", con); 
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("Select  SiparisAd,SiparisAdet,count(1) AS Toplam FROM Siparisler Group by SiparisAd, SiparisAdet ORDER BY Toplam asc ", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
+        }
     }
 }

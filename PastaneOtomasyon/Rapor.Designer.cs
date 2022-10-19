@@ -34,6 +34,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,7 +44,7 @@
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button1.ForeColor = System.Drawing.Color.Teal;
-            this.button1.Location = new System.Drawing.Point(53, 48);
+            this.button1.Location = new System.Drawing.Point(62, 26);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(285, 46);
             this.button1.TabIndex = 0;
@@ -52,16 +55,16 @@
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(462, 113);
+            this.dataGridView1.Location = new System.Drawing.Point(433, 89);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(407, 150);
+            this.dataGridView1.Size = new System.Drawing.Size(407, 243);
             this.dataGridView1.TabIndex = 1;
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.ForeColor = System.Drawing.Color.Teal;
-            this.button3.Location = new System.Drawing.Point(53, 128);
+            this.button3.Location = new System.Drawing.Point(62, 78);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(285, 46);
             this.button3.TabIndex = 3;
@@ -73,7 +76,7 @@
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.ForeColor = System.Drawing.Color.Teal;
-            this.button2.Location = new System.Drawing.Point(53, 226);
+            this.button2.Location = new System.Drawing.Point(62, 130);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(285, 46);
             this.button2.TabIndex = 4;
@@ -85,7 +88,7 @@
             // 
             this.button4.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button4.ForeColor = System.Drawing.Color.Teal;
-            this.button4.Location = new System.Drawing.Point(53, 332);
+            this.button4.Location = new System.Drawing.Point(62, 182);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(285, 46);
             this.button4.TabIndex = 5;
@@ -93,12 +96,51 @@
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.ForeColor = System.Drawing.Color.Teal;
+            this.button5.Location = new System.Drawing.Point(62, 234);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(285, 46);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "Ürünler ile Satıcı Karşılaştır";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button6.ForeColor = System.Drawing.Color.Teal;
+            this.button6.Location = new System.Drawing.Point(62, 286);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(285, 46);
+            this.button6.TabIndex = 7;
+            this.button6.Text = "En Çok Sipariş Verilen 2 Ürün ";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button7.ForeColor = System.Drawing.Color.Teal;
+            this.button7.Location = new System.Drawing.Point(62, 338);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(285, 46);
+            this.button7.TabIndex = 8;
+            this.button7.Text = "En Az Sipariş Verilen Ürünler";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // Rapor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(893, 450);
+            this.Controls.Add(this.button7);
+            this.Controls.Add(this.button6);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
@@ -118,5 +160,8 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button7;
     }
 }
