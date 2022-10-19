@@ -151,6 +151,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "Kullanici";
             this.Text = "Kullanici giris";
+            this.Load += new System.EventHandler(this.Kullanici_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

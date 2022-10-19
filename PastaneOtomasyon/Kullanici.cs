@@ -23,8 +23,8 @@ namespace PastaneOtomasyon
         private void button1_Click(object sender, EventArgs e)
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("select * from Personelgiris  where PersonelAdSoyad=@PersonelAdSoyad and Sifre=@Sifre", con);
-            cmd.Parameters.AddWithValue("@PersonelAdSoyad", textBox1.Text);
+            SqlCommand cmd = new SqlCommand("select * from kullanicigiris  where KullanıcıAdSoyad=@KullanıcıAdSoyad and Sifre=@Sifre", con);
+            cmd.Parameters.AddWithValue("@KullanıcıAdSoyad=", textBox1.Text);
             cmd.Parameters.AddWithValue("@Sifre", textBox2.Text);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
@@ -38,6 +38,15 @@ namespace PastaneOtomasyon
             {
                 MessageBox.Show("ÜZGÜNÜM..HATALI GİRİŞ..");
             }
+
+        }
+
+        private void Kullanici_Load(object sender, EventArgs e)
+        {
+           
+            Ürünler go = new Ürünler();
+            go.Show();
+            this.Hide();
 
         }
     }

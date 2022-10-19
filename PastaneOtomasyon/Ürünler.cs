@@ -42,7 +42,7 @@ namespace PastaneOtomasyon
             con.Open();
             SqlCommand cmd = new SqlCommand("insert into Ürünler (ÜrünAd,ÜrünFiyat,KullanimTarihi,ÜretimTarihi,SatıcıNo) values (@ÜrünAd, @ÜrünFiyat, @KullanimTarihi, @ÜretimTarihi,@SatıcıNo)", con);
 
-            cmd.Parameters.AddWithValue("@ÜrünAd", textBox2.Text);
+            cmd.Parameters.AddWithValue("@ÜrünAd", comboBox2.Text);
             cmd.Parameters.AddWithValue("@ÜrünFiyat", textBox3.Text); 
             cmd.Parameters.AddWithValue("@KullanimTarihi", textBox4.Text);
             cmd.Parameters.AddWithValue("@ÜretimTarihi", textBox5.Text);
@@ -63,7 +63,7 @@ namespace PastaneOtomasyon
         private void button5_Click(object sender, EventArgs e)  //yenile butonu 
         {
             con.Open();
-            SqlCommand komut = new SqlCommand("Update Ürünler set ÜrünAd='" + textBox2.Text.ToString() + "',ÜrünFiyat='" + textBox3.Text.ToString() + "',KullanimTarihi='"+textBox4.Text.ToString() + "',ÜretimTarihi='" + textBox5.Text.ToString() + "',SaticiNo='" + comboBox1.Text.ToString() + "'where UrunNo='" + textBox1.Text+"'",con);
+            SqlCommand komut = new SqlCommand("Update Ürünler set ÜrünAd='" + comboBox2.Text.ToString() + "',ÜrünFiyat='" + textBox3.Text.ToString() + "',KullanimTarihi='"+textBox4.Text.ToString() + "',ÜretimTarihi='" + textBox5.Text.ToString() + "',SaticiNo='" + comboBox1.Text.ToString() + "'where UrunNo='" + textBox1.Text+"'",con);
             komut.ExecuteNonQuery();      
             Listele("select * from Ürünler ");
             con.Close();
@@ -72,7 +72,7 @@ namespace PastaneOtomasyon
 
         private void button6_Click(object sender, EventArgs e)  //Ara butonu
         {
-            SqlCommand cmd = new SqlCommand("select * from Ürünler  where ÜrünAd like '%" + textBox2.Text + "%'", con);
+            SqlCommand cmd = new SqlCommand("select * from Ürünler  where ÜrünAd like '%" + comboBox2.Text + "%'", con);
             con.Close();
             SqlDataAdapter da =new SqlDataAdapter(cmd);    
             DataTable doldur =new DataTable();
@@ -113,9 +113,8 @@ namespace PastaneOtomasyon
                 comboBox1.Items.Add(dr["SaticiNo"]);
             }
             con.Close();
-
-
-            //eksik 2. yapmüşteriler
         }
+
+        
     }
 }
