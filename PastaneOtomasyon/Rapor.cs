@@ -29,10 +29,31 @@ namespace PastaneOtomasyon
             DataTable doldur = new DataTable();
             da.Fill(doldur);
             dataGridView1.DataSource = doldur;
-
             con.Close();
 
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Müsteriler order by MüsteriAdSoyad desc ", con); ;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Siparisler order by SiparisAd desc ", con); ;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
         }
     }
 }
