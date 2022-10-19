@@ -123,7 +123,7 @@
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button3.BackColor = System.Drawing.Color.Chocolate;
             this.button3.Location = new System.Drawing.Point(48, 346);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 49);
@@ -134,7 +134,7 @@
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button5.BackColor = System.Drawing.Color.Chocolate;
             this.button5.Location = new System.Drawing.Point(142, 346);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 49);
@@ -145,7 +145,7 @@
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button6.BackColor = System.Drawing.Color.Chocolate;
             this.button6.Location = new System.Drawing.Point(236, 346);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 49);
@@ -156,7 +156,7 @@
             // 
             // button7
             // 
-            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button7.BackColor = System.Drawing.Color.Chocolate;
             this.button7.Location = new System.Drawing.Point(335, 346);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 49);
@@ -167,7 +167,7 @@
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button4.BackColor = System.Drawing.Color.Chocolate;
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(155, 270);
             this.button4.Name = "button4";

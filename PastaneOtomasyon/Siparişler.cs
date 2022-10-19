@@ -116,5 +116,14 @@ namespace PastaneOtomasyon
             Listele("select * from Siparisler ");
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+            int a= Convert.ToInt32(textBox4.Text); 
+            int b =Convert.ToInt32(textBox5.Text);
+            int sonuc = a * b;
+
+            textBox6.Text = sonuc.ToString();
+        }
     }
 }
