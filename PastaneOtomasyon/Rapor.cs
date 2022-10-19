@@ -78,7 +78,7 @@ namespace PastaneOtomasyon
             con.Close();
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void button6_Click(object sender, EventArgs e)  //en cok sipariş verilen 2 ürün 
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("Select top 2 SiparisAd,SiparisAdet,count(1) AS Toplam FROM Siparisler Group by SiparisAd, SiparisAdet ORDER BY Toplam desc", con); 
@@ -89,10 +89,21 @@ namespace PastaneOtomasyon
             con.Close();
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void button7_Click(object sender, EventArgs e) //sipariş edilen ürünlerin toplam tutarı 
         {
             con.Open();
-            SqlCommand cmd = new SqlCommand("Select  SiparisAd,SiparisAdet,count(1) AS Toplam FROM Siparisler Group by SiparisAd, SiparisAdet ORDER BY Toplam asc ", con);
+            SqlCommand cmd = new SqlCommand("select SiparisAd,SiparisFiyat,SiparisAdet, sum(Tutar) as 'toplam tutar'from Siparisler group by SiparisAd, SiparisFiyat, Tutar, SiparisAdet order by Tutar desc ", con);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select sum(tutar) as 'TOPLAM TUTAR' FROM Siparisler  ", con);
             SqlDataAdapter da = new SqlDataAdapter(cmd);
             DataTable doldur = new DataTable();
             da.Fill(doldur);
