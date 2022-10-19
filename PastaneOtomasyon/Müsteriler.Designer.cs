@@ -123,52 +123,58 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(38, 346);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button3.Location = new System.Drawing.Point(48, 346);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 49);
             this.button3.TabIndex = 31;
             this.button3.Text = "kaydet ";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.button5.Location = new System.Drawing.Point(142, 346);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(75, 49);
             this.button5.TabIndex = 32;
             this.button5.Text = "yenile";
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(260, 346);
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button6.Location = new System.Drawing.Point(236, 346);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(75, 49);
             this.button6.TabIndex = 33;
             this.button6.Text = "ara";
-            this.button6.UseVisualStyleBackColor = true;
+            this.button6.UseVisualStyleBackColor = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
-            this.button7.Location = new System.Drawing.Point(386, 346);
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button7.Location = new System.Drawing.Point(335, 346);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(75, 49);
             this.button7.TabIndex = 34;
             this.button7.Text = "sil";
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(386, 121);
+            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(155, 270);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 154);
+            this.button4.Size = new System.Drawing.Size(156, 55);
             this.button4.TabIndex = 35;
             this.button4.Text = "listele";
-            this.button4.UseVisualStyleBackColor = true;
+            this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // dataGridView1
