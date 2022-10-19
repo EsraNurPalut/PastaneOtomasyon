@@ -110,5 +110,12 @@ namespace PastaneOtomasyon
             dataGridView1.DataSource = doldur;
             con.Close();
         }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Form1 go = new Form1();
+            go.Show();
+            this.Hide();
+        }
     }
 }
