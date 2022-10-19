@@ -55,5 +55,16 @@ namespace PastaneOtomasyon
             dataGridView1.DataSource = doldur;
             con.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            con.Open();
+            SqlCommand cmd = new SqlCommand("select * from Saticilar order by SaticiAdSoyad desc ", con); ;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable doldur = new DataTable();
+            da.Fill(doldur);
+            dataGridView1.DataSource = doldur;
+            con.Close();
+        }
     }
 }
