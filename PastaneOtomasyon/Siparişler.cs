@@ -24,7 +24,7 @@ namespace PastaneOtomasyon
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form1 go = new Form1();
+            Login go = new Login();
             go.Show();
             this.Hide();
         }
@@ -124,6 +124,11 @@ namespace PastaneOtomasyon
             int sonuc = a * b;
 
             textBox6.Text = sonuc.ToString();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

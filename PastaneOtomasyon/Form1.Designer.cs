@@ -95,6 +95,7 @@
             this.button5.TabIndex = 4;
             this.button5.Text = "RAPOR ";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // label1
             // 

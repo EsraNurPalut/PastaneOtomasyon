@@ -126,6 +126,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Rapor.resx">
+      <DependentUpon>Rapor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Saticilar.resx">
       <DependentUpon>Saticilar.cs</DependentUpon>
     </EmbeddedResource>

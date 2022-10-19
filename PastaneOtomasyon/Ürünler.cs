@@ -46,7 +46,7 @@ namespace PastaneOtomasyon
             cmd.Parameters.AddWithValue("@ÜrünFiyat", textBox3.Text); 
             cmd.Parameters.AddWithValue("@KullanimTarihi", textBox4.Text);
             cmd.Parameters.AddWithValue("@ÜretimTarihi", textBox5.Text);
-            cmd.Parameters.AddWithValue("@SatıcıNo", comboBox1.Text);
+            cmd.Parameters.AddWithValue("@SaticiNo", comboBox1.Text);
             cmd.ExecuteNonQuery();
             con.Close();
             Listele("select * from Ürünler ");

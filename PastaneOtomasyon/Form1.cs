@@ -45,5 +45,12 @@ namespace PastaneOtomasyon
             go.Show();
             this.Hide();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Rapor go = new Rapor();
+            go.Show();
+            this.Hide();
+        }
     }
 }

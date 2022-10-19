@@ -24,13 +24,13 @@ namespace PastaneOtomasyon
         {
             con.Open();
             SqlCommand cmd = new SqlCommand("select * from kullanicigiris  where KullanıcıAdSoyad=@KullanıcıAdSoyad and Sifre=@Sifre", con);
-            cmd.Parameters.AddWithValue("@KullanıcıAdSoyad=", textBox1.Text);
+            cmd.Parameters.AddWithValue("@KullanıcıAdSoyad", textBox1.Text);
             cmd.Parameters.AddWithValue("@Sifre", textBox2.Text);
             SqlDataReader dr = cmd.ExecuteReader();
             if (dr.Read())
             {
                 MessageBox.Show("HOŞGELDİNİZ");
-                Form1 go = new Form1();
+                Siparişler go = new Siparişler();
                 go.Show();
                 this.Hide();
             }
